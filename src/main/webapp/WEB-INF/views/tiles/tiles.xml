@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+
+<!--  -->
+	<definition name="login-definition" template="/WEB-INF/views/tiles/layouts/loginLayout.jsp">
+		<put-attribute name="title" value="aa" type="string"/>
+		<put-attribute name="header" value="/WEB-INF/views/tiles/logintemplate/header.jsp" /> 
+		<put-attribute name="center" value="/WEB-INF/views/tiles/logintemplate/center.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/logintemplate/footer.jsp" />
+	</definition>
+    <definition name="login" extends="login-definition">
+		<put-attribute name="title" value="登陆" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/login/login.jsp" />
+	</definition>
+	<definition name="register" extends="login-definition">
+		<put-attribute name="title" value="注册" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/login/register.jsp" />
+	</definition>
+	<definition name="forgetpw" extends="login-definition">
+		<put-attribute name="title" value="忘记密码" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/login/forgetpw.jsp" />
+	</definition>
+
+
+<!--  -->
+	<definition name="admin-definition" template="/WEB-INF/views/tiles/layouts/adminLayout.jsp">
+		<put-attribute name="title" value="aa" />
+		<put-attribute name="alertbox" value="/WEB-INF/views/tiles/admintemplate/alertbox.jsp" />
+		<put-attribute name="center" value="/WEB-INF/views/tiles/admintemplate/center.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/admintemplate/footer.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/footerjs.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/tiles/admintemplate/header.jsp" />
+		<put-attribute name="leftmenu" value="/WEB-INF/views/tiles/admintemplate/leftmenu.jsp" />
+		<put-attribute name="settingbox" value="/WEB-INF/views/tiles/admintemplate/settingbox.jsp" />
+		<put-attribute name="top" value="/WEB-INF/views/tiles/admintemplate/top.jsp" />
+	</definition>
+	<definition name="home" extends="admin-definition">
+		<put-attribute name="title" value="仪表盘" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/home.jsp" />
+	</definition>
+
+    <definition name="website" extends="admin-definition">
+		<put-attribute name="title" value="数据源市场" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/website.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/websitefooterjs.jsp" />
+	</definition>
+	<definition name="addwebsite" extends="admin-definition">
+		<put-attribute name="title" value="发布数据源" />
+		<put-attribute name="center" value="/WEB-INF/views/pages/admin/addwebsite.jsp" />
+		<put-attribute name="footerjs" value="/WEB-INF/views/tiles/admintemplate/addwebsitefooterjs.jsp" />
+	</definition>
+	
+</tiles-definitions>
